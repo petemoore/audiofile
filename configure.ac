@@ -109,10 +109,10 @@ AS_IF([test "$enable_documentation" = "yes"],
 	[AC_PATH_PROG(A2X, a2x, :)
 	AC_PATH_PROG(ASCIIDOC, asciidoc, :)
 	AS_IF([test "$A2X" = :],
-		[AC_MSG_WARN([Could not find a2x.])]
+		[AC_MSG_ERROR([Could not find a2x. Please install asciidoc.])]
 	)
 	AS_IF([test "$ASCIIDOC" = :],
-		[AC_MSG_WARN([Could not find asciidoc.])]
+		[AC_MSG_ERROR([Could not find asciidoc. Please install asciidoc.])]
 	)]
 )
 
